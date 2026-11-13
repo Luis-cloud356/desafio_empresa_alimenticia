@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuários</title>
+
+    <link rel="stylesheet" href="../style/style.usuario.css">
+    <script src="../script/script.usuario.js" defer></script>
+</head>
+<body>
+
+    <header class="topo">
+        <div class="logo">
+            <span>PELO FUTURO DO TRABALHO</span>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <h2>Gerenciamento de Tarefas</h2>
+
+        <div class="menu">
+            <a href="cadastro.usuario.html">Cadastro de Usuários</a>
+            <a href="cadastro.tarefa.html">Cadastro de Tarefas</a>
+            <a href="gerenciar.tarefas.html">Gerenciar Tarefas</a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <h3>Cadastro de Usuários</h3>
+
+        <form id="formUsuario">
+
+            <div class="campo">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <button type="submit" id="btnCadastrar">
+                Cadastrar
+            </button>
+
+            <p id="mensagem"></p>
+
+        </form>
+
+    </main>
+
+</body>
+</html>

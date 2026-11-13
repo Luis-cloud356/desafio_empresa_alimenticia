@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #000;
+    background: #fff;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.navbar {
+    min-height: 67px;
+    margin: 22px 24px 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    color: #fff;
+    background: #0056b3;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.menu a {
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.menu a:hover,
+.menu a[aria-current="page"] {
+    text-decoration: underline;
+}
+
+.container {
+    margin: 15px 24px 30px;
+}
+
+.container h2 {
+    margin: 0 0 14px;
+    font-size: 18px;
+}
+
+.quadro {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    align-items: start;
+}
+
+.coluna h3 {
+    margin: 0 0 5px 3px;
+    font-size: 16px;
+}
+
+.lista-tarefas {
+    display: grid;
+    gap: 4px;
+}
+
+.cartao-tarefa {
+    padding: 8px;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    background: #f4f4f4;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.cartao-tarefa p {
+    margin: 0 0 1px;
+}
+
+.acoes,
+.controles-status {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 9px 0 3px 7px;
+}
+
+.botao,
+button {
+    display: inline-block;
+    padding: 5px 9px;
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    background: #007bff;
+    font: inherit;
+    font-size: 12px;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.botao:hover,
+button:hover {
+    background: #0056b3;
+}
+
+button:disabled {
+    opacity: .6;
+    cursor: wait;
+}
+
+.controles-status select {
+    min-height: 25px;
+    padding: 3px 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #eee;
+    font: inherit;
+    font-size: 12px;
+}
+
+.vazio {
+    margin: 0;
+    padding: 10px;
+    color: #666;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+#mensagem {
+    min-height: 0;
+    margin: 0 0 10px;
+    font-size: 13px;
+}
+
+#mensagem:empty {
+    display: none;
+}
+
+.sucesso {
+    color: #176b2c;
+}
+
+.erro {
+    color: #b00020;
+}
+
+@media (max-width: 760px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .menu {
+        gap: 12px 18px;
+    }
+
+    .quadro {
+        grid-template-columns: 1fr;
+    }
+}

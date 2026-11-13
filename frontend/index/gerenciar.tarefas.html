@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Tarefas</title>
+    <link rel="stylesheet" href="../style/style.gerenciamento.css">
+    <script src="../script/script_gerenciamento_tarefas.js" defer></script>
+</head>
+<body>
+    <nav class="navbar" aria-label="Menu principal">
+        <h1>Gerenciamento de Tarefas</h1>
+        <div class="menu">
+            <a href="cadastro.usuario.html">Cadastro de Usuários</a>
+            <a href="cadastro.tarefa.html">Cadastro de Tarefas</a>
+            <a href="gerenciar.tarefas.html" aria-current="page">Gerenciar Tarefas</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2>Tarefas</h2>
+        <p id="mensagem" role="status" aria-live="polite"></p>
+        <section class="quadro" aria-label="Tarefas por status">
+            <section class="coluna" aria-labelledby="titulo-a-fazer">
+                <h3 id="titulo-a-fazer">A Fazer</h3>
+                <div class="lista-tarefas" id="coluna-a-fazer"></div>
+            </section>
+            <section class="coluna" aria-labelledby="titulo-fazendo">
+                <h3 id="titulo-fazendo">Fazendo</h3>
+                <div class="lista-tarefas" id="coluna-fazendo"></div>
+            </section>
+            <section class="coluna" aria-labelledby="titulo-pronto">
+                <h3 id="titulo-pronto">Pronto</h3>
+                <div class="lista-tarefas" id="coluna-pronto"></div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

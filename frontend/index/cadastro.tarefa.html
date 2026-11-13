@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Tarefas</title>
+
+    <link rel="stylesheet" href="../style/style_tarefas.css">
+    <script src="../script/script_tarefas.js" defer></script>
+</head>
+<body>
+    <nav class="navbar" aria-label="Menu principal">
+        <h1>Gerenciamento de Tarefas</h1>
+
+        <div class="menu">
+            <a href="cadastro.usuario.html">Cadastro de Usuários</a>
+            <a href="cadastro.tarefa.html" aria-current="page">Cadastro de Tarefas</a>
+            <a href="gerenciar.tarefas.html">Gerenciar Tarefas</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2>Cadastro de Tarefas</h2>
+
+        <form id="formTarefa">
+            <div class="campo">
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" name="descricao" required>
+            </div>
+
+            <div class="campo">
+                <label for="nome_setor">Setor:</label>
+                <input type="text" id="nome_setor" name="nome_setor" required>
+            </div>
+
+            <div class="campo">
+                <label for="usuarioId">Usuário:</label>
+                <select id="usuarioId" name="usuarioId" required>
+                    <option value="" selected disabled>Carregando usuários...</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="prioridade">Prioridade:</label>
+                <select id="prioridade" name="prioridade" required>
+                    <option value="" selected disabled>Selecione</option>
+                    <option value="BAIXA">Baixa</option>
+                    <option value="MEDIA">Média</option>
+                    <option value="ALTA">Alta</option>
+                </select>
+            </div>
+
+            <button type="submit" id="btnCadastrar">Cadastrar</button>
+            <p id="mensagem" role="status" aria-live="polite"></p>
+        </form>
+    </main>
+</body>
+</html>
